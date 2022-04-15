@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\src\ZionApps.Outbox.AspNetCore\ZionApps.Outbox.AspNetCore.csproj" />
+        <ProjectReference Include="..\src\ZionApps.Outbox.EF\ZionApps.Outbox.EF.csproj" />
+        <ProjectReference Include="..\src\ZionApps.Outbox.Kafka\ZionApps.Outbox.Kafka.csproj" />
+        <ProjectReference Include="..\src\ZionApps.Outbox.PostgreSql\ZionApps.Outbox.PostgreSql.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+
+</Project>

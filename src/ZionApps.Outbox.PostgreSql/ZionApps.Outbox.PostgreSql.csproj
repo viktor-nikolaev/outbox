@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ZionApps.Outbox.Relational\ZionApps.Outbox.Relational.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Linq.Async" Version="5.0.0" />
+        <PackageReference Include="Npgsql" Version="5.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Queries\GetNonSequentialEventsToDispatch.sql" />
+        <EmbeddedResource Include="Queries\GetSequentialEventsToDispatch.sql" />
+        <None Remove="GetNonSequentialEventsToDispatch.sql" />
+        <None Remove="GetSequentialEventsToDispatch.sql" />
+        <None Remove="Queries\CreateEventsTable.sql" />
+        <EmbeddedResource Include="Queries\CreateEventsTable.sql" />
+        <None Remove="Queries\InsertEvent.sql" />
+        <EmbeddedResource Include="Queries\InsertEvent.sql" />
+        <None Remove="Queries\UpdateEventStatus.sql" />
+        <EmbeddedResource Include="Queries\UpdateEventStatus.sql" />
+    </ItemGroup>
+
+</Project>
